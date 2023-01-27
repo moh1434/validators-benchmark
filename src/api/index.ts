@@ -15,20 +15,6 @@ router.get<{}, MessageResponse>('/', (req, res) => {
   });
 });
 
-router.get<{}, any>('/zod', async (req, res) => {
-  console.time('test-zod');
-  withZod(user);
-  console.timeEnd('test-zod');
-  res.status(200).json({ message: 'see the console' });
-});
-
-router.get<{}, any>('/classValidator', async (req, res) => {
-  console.time('test-classValidator');
-  await withClassValidator(user);
-  console.timeEnd('test-classValidator');
-  res.status(200).json({ message: 'see the console' });
-});
-
 router.get<{}, any>('/test', async (req, res) => {
   suite
     .add('ClassValidator', function () {
