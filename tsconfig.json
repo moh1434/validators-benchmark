@@ -1,18 +1,15 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
-    "sourceMap": true,
-    "target": "esnext",
     "module": "commonjs",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": true,
-    "strict": true,
-    "skipLibCheck": true
+    "target": "esnext",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist",
+    "allowJs": true,
+    "lib": ["dom", "es6"],
+    "experimentalDecorators": true, //for class validator
+
+    "esModuleInterop": true
   },
-  "include": [
-    "./*.js",
-    "src/**/*.ts",
-    "test/**/*.ts",
-  ],
+  "include": ["./*.js", "src/**/*.ts", "test/**/*.ts"]
 }
